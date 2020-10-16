@@ -186,8 +186,8 @@
                             <br><br><br>
                             <a class="main-btn" href="#work" style="margin-right: 30px;
                              margin-bottom: 30px;">View My Work</a>
-                            <a class="main-btn" href="tdd/index.html" style="margin-right: 30px;
-                             margin-bottom: 30px;">View Digest</a>
+                            <!-- <a class="main-btn" href="tdd/index.html" style="margin-right: 30px;
+                             margin-bottom: 30px;">View Digest</a> -->
 
 
                     </div> <!-- about content -->
@@ -413,7 +413,11 @@
                     </div>
                 </div>
             </div> <!-- row -->
-            <div class="row">
+            <div class="row category-tab">
+                <a class="main-btn custom-2 work-button" onClick="showDesigns()">Design Projects</a>
+                <a class="main-btn custom-2 work-button" onClick="showDev()">Development Projects</a>
+            </div>
+            <div class="row" id="design">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-work text-center mt-30">
                         <div class="work-image">
@@ -530,6 +534,9 @@
                         </div>
                     </div> <!-- single work -->
                 </div>
+            </div>
+
+            <div class="row" id="dev">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-work text-center mt-30">
                         <div class="work-image">
@@ -585,17 +592,8 @@
                     </div>
                 </div>
 
-            </div> <!-- row -->
-            <!--             <div class="row">
-                <div class="col-lg-12">
-                    <div class="work-more text-center mt-50">
-                        <a class="main-btn"
-                            href="https://drive.google.com/drive/folders/15UnaYNxUuPfh4RzPj_AprL2OgVNotTjt?usp=sharing">More
-                            Works</a>
-                    </div> <!-- work more -->
-            <!--  </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
+            </div>
+        </div>
     </section>
 
     <!--====== WORK PART ENDS ======-->
@@ -679,7 +677,7 @@
             </div> <!-- row -->
 
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-5 col-md-6 col-sm-12">
                     <div class="speaker-card">
                         <iframe width="100%" height="40%" src="https://www.youtube.com/embed/YUQkXnjp1DU?start=3"
                             frameborder="0"
@@ -690,8 +688,9 @@
                                 <a href="https://youtu.be/YUQkXnjp1DU">
                                     How to Design Brand Identity?</a></h4>
                             <p class="session-description" style="color: black;">
-                                I was invited to speak on the Web Mentor Webinars about how to build a personal brand and design
-                                 a brand's identity.
+                                I was invited to speak on the Web Mentor Webinars about how to build a personal brand
+                                and design
+                                a brand's identity.
                             </p>
                             <br>
                             <a class="main-btn custom-2"
@@ -699,7 +698,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-5 col-md-6 col-sm-12">
                     <div class=" speaker-card">
                         <iframe width="100%" height="40%" src="https://www.youtube.com/embed/4MXwqwA17o0?start=499"
                             frameborder="0"
@@ -711,7 +710,7 @@
                                 <a href="https://youtu.be/4MXwqwA17o0">
                                     DSC IEM Orintation</a></h4>
                             <p class="session-description" style="color: black;">
-                               I'm leading this technical club on my campus, had hosted a session to tell the members
+                                I'm leading this technical club on my campus, had hosted a session to tell the members
                                 about the club, our plans for this session and the rules and regulations.
 
                             </p>
@@ -742,7 +741,7 @@
                             <img src="assets/images/ghpages.jpg">
                         </div>
                         <div class="service-content">
-                            <h4 class="service-title" style="margin-top: 12px;">
+                            <h4 class="service-title" style="margin-top: 15px;">
                                 <a href="https://medium.com/@makhariamahak/how-to-use-github-pages-256c2063d1a6">
                                     How to use GitHub Pages?</a></h4>
                             <p style="color: black;">GitHub is the platform for all developers to maintain projects,
@@ -764,7 +763,7 @@
                             <img src="assets/images/first-internship.jpg">
                         </div>
                         <div class="service-content">
-                            <h4 class="service-title" style="margin-top: 12px;">
+                            <h4 class="service-title" style="margin-top: 15px;">
                                 <a
                                     href="https://blog.usejournal.com/how-do-you-go-about-to-bag-your-first-internship-aa592456aa3f">
                                     How to bag your first internship?</a></h4>
@@ -785,7 +784,7 @@
                             <img src="assets/images/freestuff.jpg">
                         </div>
                         <div class="service-content">
-                            <h4 class="service-title" style="margin-top: 12px;">
+                            <h4 class="service-title" style="margin-top: 15px;">
                                 <a
                                     href="https://medium.com/@makhariamahak/top-5-free-resources-of-2019-694ec40ce4ba?source=friends_link&sk=5531a289c950368856bee0b7495a407f">
                                     Top 5 FREE Resources of 2019</a></h4>
@@ -806,7 +805,7 @@
                             <img src="assets/images/freetools.jpg">
                         </div>
                         <div class="service-content">
-                            <h4 class="service-title" style="margin-top: 12px;">
+                            <h4 class="service-title" style="margin-top: 15px;">
                                 <a
                                     href="https://medium.com/@makhariamahak/official-free-tools-for-scheduling-posts-on-facebook-instagram-twitter-49f368ec7e9a">
                                     How to schedule posts for free?</a></h4>
