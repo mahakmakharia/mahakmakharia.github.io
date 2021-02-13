@@ -951,9 +951,16 @@ img {
   }
 }
 @media (max-width: 767px) {
+  .about-text {
+    padding-left: 0px;
+  }
   .about-area {
     padding: 80px 20px;
   }
+}
+
+.about-text {
+  padding-left: 50px;
 }
 
 .about-content .about-title {
@@ -969,6 +976,13 @@ img {
   float: left;
   margin-top: 5px;
 }
+
+.hero-image {
+  width: 100% !important;
+  border-radius: 50%;
+  border: 10px solid #f4aa27;
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .about-content ul li {
     width: 100%;
@@ -1083,13 +1097,13 @@ img {
   margin: 20px 20px 20px 0px;
   padding: 20px;
   border-radius: 5px;
-   width: 100%;
+  width: 100%;
 }
 
 .speaker-card .session-content {
   margin-top: 20px;
 }
-.speaker-card .session-content .session-title a{
+.speaker-card .session-content .session-title a {
   font-size: 22px;
   font-weight: 600;
   color: #442903;
@@ -1264,16 +1278,16 @@ img {
   }
 }
 
-.work-button{
+.work-button {
   margin: 10px;
   color: white !important;
 }
 
-.category-tab{
+.category-tab {
   margin-top: 10px;
 }
 
-#dev{
+#design {
   display: none;
 }
 
