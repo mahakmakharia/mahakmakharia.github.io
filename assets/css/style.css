@@ -153,6 +153,12 @@ p {
   border-color: #442903;
 }
 
+@media (max-width: 767px) {
+  .main-btn {
+    padding: 0px 25px;
+  }
+}
+
 /*===== All Section Title Style =====*/
 .section-title .title {
   font-weight: 700;
@@ -1069,6 +1075,12 @@ img {
   margin: 10px;
   padding: 5px;
   vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+  .skill-image {
+    margin: 5px;
+  }
 }
 
 .skill-image img {
