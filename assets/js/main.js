@@ -333,12 +333,12 @@ function init() {
 var design = document.getElementById("design");
 var dev = document.getElementById("dev");
 
-document.getElementById("design-button").onclick = function () {
+document.getElementById("design-button").addEventListener("click" , function () {
   design.style.display = "flex";
   dev.style.display = "none";
-};
+});
 
-document.getElementById("dev-button").onclick = function () {
+document.getElementById("dev-button").addEventListener("click" , function () {
   dev.style.display = "flex";
   design.style.display = "none";
-};
+});
