@@ -1,9 +1,9 @@
 /*===========================
    COMMON css 
 ===========================*/
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800");
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800');
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #f4aa27;
@@ -46,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: #32333c;
   margin: 0px;
@@ -642,7 +642,7 @@ img {
 }
 .navigation .navbar .navbar-nav .nav-item a::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 3px;
   height: 0;
   background-color: #442903;
@@ -903,7 +903,7 @@ img {
 }
 .header-social .header-social-icon::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 100%;
   height: 2px;
   background-color: #442903;
@@ -950,6 +950,12 @@ img {
 /*===========================
         ABOUT css 
 ===========================*/
+.about-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .about-area {
     padding-top: 90px;
@@ -1219,7 +1225,7 @@ img {
 }
 .call-to-action::before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   width: 100%;
@@ -1358,7 +1364,7 @@ img {
 }
 .single-work .work-overlay .work-content ul::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 60px;
   height: 2px;
   background-color: #fff;
@@ -1598,7 +1604,7 @@ img {
 }
 .page-banner-content .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 10px;
   height: 2px;
   background-color: #fff;
