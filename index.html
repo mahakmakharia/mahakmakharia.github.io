@@ -22,9 +22,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500..600&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400..700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans+Condensed:wght@200..900&display=swap"
+    rel="stylesheet">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R4KS51HV3"></script>
@@ -39,19 +41,35 @@
 </head>
 
 <body>
-
-  <header></header>
-  <section id="hey">
-    <h6>Hello! Meet your trusted web engineer, building performant products for SaaS and D2C companies. </h6>
-    <h1>Mahak Makharia</h1>
+  <header class="header">
+    <nav class="nav">
+      <ul class="flex">
+        <li class="nav-hey active"><a href="#hey">Hey</a></li>
+        <li class="nav-work"><a href="#work">Work</a></li>
+        <li class="nav-story"><a href="#story">Story</a></li>
+        <li class="nav-feedback"><a href="#feedback">Praise</a></li>
+        <li class="nav-contact"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="hey" class="intro-section flex d-column j-end">
+    <div class="gradient"></div>
+    <div class="intro-text">
+      <h6 class="subtitle medium text-32_40 b-secondary px-32">
+        Hello! Meet your trusted web engineer, building
+        <br /> performant products for SaaS and D2C companies.
+      </h6>
+      <h1 class="title heading px-32">Mahak Makharia</h1>
+      <video src="assets/images/title-highlight.webm" autoplay preload="auto" playsinline muted></video>
+    </div>
   </section>
   <section class="content-section" id="work">
-    <h2>My latest work <span>from 2021 'til today</span></h2>
-    <div class="work-items-container">
+    <h2 class="sub-heading">My latest work <span class="highlight">from 2021 'til today</span></h2>
+    <div class="work-items-container flex d-column">
     </div>
   </section>
   <section class="content-section" id="story">
-    <h2>My story</h2>
+    <h2 class="sub-heading">My story</h2>
     <div>
       <img />
       <div> I was born and brought up in Kolkata, in a middle-class family. I'd started working part-time since I was
@@ -67,7 +85,7 @@
     </div>
   </section>
   <section class="content-section" id="feedback">
-    <h2>What people say about my work</h2>
+    <h2 class="sub-heading">Praise for my work <span class="highlight">People love working with me!</span></h2>
     <div class="feedback-container"></div>
   </section>
   <section id="contact">
@@ -81,8 +99,6 @@
       </div>
     </div>
   </section>
-
-
 
   <template id="work-item">
     <div class="work-item">

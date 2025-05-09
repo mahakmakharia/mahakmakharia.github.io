@@ -224,7 +224,29 @@ const renderFeedbacks = () => {
   });
 };
 
+const sections = q$.selectAll('section').elem;
+const navLinks = q$.selectAll('.nav li').elem;
+
+function handleScroll() {
+  let scrollPosition = window.scrollY + window.innerHeight / 2;
+
+  sections.forEach((section) => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute('id');
+
+    if (scrollPosition >= top && scrollPosition < top + height) {
+      navLinks.forEach((link) => link.classList.remove('active'));
+      console.log('here', id, q$.select(`.nav li a[href="#${id}"]`).elem);
+      q$.select(`.nav-${id}`).addClass('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', handleScroll);
+
 document.addEventListener('DOMContentLoaded', () => {
   renderWorkItems();
   renderFeedbacks();
+  handleScroll();
 });

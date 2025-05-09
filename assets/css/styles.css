@@ -172,17 +172,18 @@ body {
 
 body {
   overflow-x: hidden !important;
-  font-family: 'Lexend', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  position: relative;
 }
 
-span {
-  font-family: 'Edu SA Beginner', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+:root {
+  --primary-black: #141414;
+  --primary: #059669;
+  --secondary-black: #7f7f7d;
+  --tertiary-black: #e4e4e4;
 }
 
 svg {
@@ -194,6 +195,14 @@ svg {
   height: 0;
   display: none;
   background: transparent;
+}
+
+.heading,
+.sub-heading {
+  font-family: 'Reddit Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  position: relative;
 }
 
 .flex-1 {
@@ -228,6 +237,10 @@ svg {
 
 .no-underline {
   text-decoration: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .no-underline:hover {
@@ -280,4 +293,156 @@ svg {
 
 .a-start {
   align-items: flex-start;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.b-primary {
+  color: var(--primary);
+}
+.b-secondary {
+  color: var(--secondary-black);
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.content-section {
+  min-height: 100vh;
+  padding: 120px 24px;
+  width: 100%;
+}
+
+.text-32_40 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.px-32 {
+  padding: 0px 32px;
+}
+
+.sub-heading {
+  font-size: 48px;
+  text-align: center;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+}
+
+span.highlight {
+  font-family: 'Edu SA Beginner', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  position: absolute;
+  top: -28px;
+  left: 52%;
+  color: var(--secondary-black);
+  text-transform: none;
+  transform: translateX(-0%) rotate(2.5deg);
+}
+
+.header {
+  position: fixed;
+  z-index: 2;
+  top: 30px;
+  left: 50%;
+  width: 100%;
+  padding-top: 8px;
+  transform: translate(-50%, -50%);
+}
+
+.header .nav {
+  padding: 4px;
+  border-radius: 22px;
+  width: max-content;
+  margin: 0 auto;
+  background-color: var(--primary-black);
+}
+
+.header .nav li {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 50%;
+}
+
+.header .nav li a {
+  color: var(--secondary-black);
+}
+
+.header .nav li.active {
+  transition: all 0.1s ease-in-out;
+  background-color: rgb(100, 255, 100, 0.2);
+  border-radius: 18px;
+}
+
+.header .nav li.active a {
+  color: #01fcac;
+}
+
+.header .nav li a:hover {
+  color: white !important;
+}
+
+.intro-section {
+  min-height: 100vh;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-section .title {
+  font-size: 176px;
+  line-height: 176px;
+  letter-spacing: -4px;
+  margin-left: -8px;
+}
+
+.intro-section video {
+  margin: 0 auto;
+  margin-top: 48px;
+  width: 80%;
+  display: block;
+  object-fit: cover;
+  border-radius: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  object-position: 50% 50%;
+}
+
+.gradient {
+  width: 100%;
+  height: 26vh;
+  background: linear-gradient(180deg, #04cf8f 0%, white 100%);
+}
+
+.work-items-container {
+  gap: 16px;
+}
+.work-item {
+  padding: 16px;
+  border-radius: 16px;
+  background-color: var(--tertiary-black);
 }
