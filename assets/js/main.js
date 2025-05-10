@@ -132,16 +132,16 @@ const q$ = {
 const workItems = [
   {
     company: 'pixxel.space',
-    logo: '',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtSy7Pi3n8rxLMeMoPnOUU6qZkEGZFvs4mxA&s',
     time: 'Oct 2024 - Present',
-    desc: "Building the world's most advanced earth observation platform using Hyperspectral Images and Artificial Intelligence",
+    desc: "Building the world's most advanced earth observation platform using Hyperspectral Images and Artificial Intelligence.",
     mainImg: '',
     sideImg: '',
     modalContent: '',
   },
   {
     company: 'getsimpl.com',
-    logo: '',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0_ZyEo118FEVM-LU-hhlNgJWcG12HrvJ_8w&s',
     time: 'Nov 2023 - Oct 2024',
     desc: "Built the transaction platform for one of India's leading BNPL platforms, enabling customers to make purchases and pay later with ease.",
     mainImg: '',
@@ -150,7 +150,7 @@ const workItems = [
   },
   {
     company: 'mydukaan.io',
-    logo: '',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6PDAuFtVIVolwS0WHxKTD86qtItQtCDrI7g&s',
     time: 'Nov 2021 - Nov 2023',
     desc: 'Built the theme engine for dukaan, enabling users to create and customize their e-commerce stores with ease.',
     mainImg: '',
@@ -205,7 +205,7 @@ const renderWorkItems = () => {
     q$.select('img', template).setAttribute('src', item.logo);
     q$.select('.name', template).modifyTextContent(item.company);
     q$.select('a', template).setAttribute('href', `https://${item.company}`);
-    q$.select('.time', template).modifyTextContent(item.time);
+    q$.select('.time', template).modifyTextContent(`(${item.time})`);
     q$.select('.desc', template).modifyTextContent(item.desc);
     workItemsContainer.appendChild(template);
   });
