@@ -163,16 +163,9 @@ const feedbacks = [
   {
     name: 'Harikrishnan',
     position: 'Senior Product Manager, Simpl',
-    img: 'https://media.licdn.com/dms/image/v2/C5103AQHeKJuWx9PkNQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1532541419195?e=1752105600&v=beta&t=2TX1I-1yXQAEcv9zUeScsGikNJ1tnzdQI-czd4rEVt4',
+    img: 'https://media.licdn.com/dms/image/v2/D5603AQH5r6ObwCHedw/profile-displayphoto-shrink_100_100/B56Za17wbNGgAY-/0/1746809064645?e=1752105600&v=beta&t=J0VDYQG46c7jR0BrygPOnu7rgSkpxdLoqyjUsovs2LA',
     review:
       'Mahak worked with me on numerous key initiatives at Simpl. She is highly collaborative and has a deep understanding of user experience which is a great skillset to have as a developer. In addition, Mahak can come up with innovative solutions while showcasing a good hold over tech while also understanding business goals. Mahak would be a great addition to any team!',
-  },
-  {
-    name: 'Atul Dubey',
-    position: 'VP of Engineering, Dukaan',
-    img: 'https://media.licdn.com/dms/image/v2/C4E03AQH57jimFPS1ow/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1516437553415?e=1752105600&v=beta&t=UrKcMajKwnyTSxIxZFUoYpo87ma7AeuNz9RxbsXEoMM',
-    review:
-      "Mahak is one of the most talented and hand-working engineers that I've worked with - always keen to learn and grow more.",
   },
   {
     name: 'Dawar Mir',
@@ -182,11 +175,25 @@ const feedbacks = [
       "Working closely with Mahak, I've been continually impressed by her ingenious solutions and her unwavering commitment to pixel-perfect designs. Her smart approach to problem-solving sets her apart, making her an invaluable asset to any team. I highly recommend her!",
   },
   {
+    name: 'Atul Dubey',
+    position: 'VP of Engineering, Dukaan',
+    img: 'https://media.licdn.com/dms/image/v2/C4E03AQH57jimFPS1ow/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1516437553415?e=1752105600&v=beta&t=UrKcMajKwnyTSxIxZFUoYpo87ma7AeuNz9RxbsXEoMM',
+    review:
+      "Mahak is one of the most talented and hand-working engineers that I've worked with - always keen to learn and grow more.",
+  },
+  {
     name: 'Raveesh Agarwal',
     position: 'Director of Engineering - Mobile, Highlevel',
     img: 'https://media.licdn.com/dms/image/v2/D4D03AQFu2JOnmoTgtQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1704027308734?e=1752105600&v=beta&t=4gGjiyO83lHp4zPat2x5ODEDva8lMZ_mk_kq2cngo3M',
     review:
       "Mahak is a well organized diligent learner, who's good at designing and developing web applications. She's a highly dedicated person who tries her best to deliver quality work on time. On top of being a great developer, she's also an easy going person which makes it easier to work with her. I wish her luck for all her future endeavors. I am sure she will always succeed.",
+  },
+  {
+    name: 'Ankur Warikoo',
+    position: 'Entrepreneur, Investor, Mentor',
+    img: 'assets/images/ankur.webp',
+    review:
+      "Mahak is one of the most diligent resources we've had on the team. Her original role was that of a designer, she was more of a software engineer. A proud moment was when she solved a persistent problem on our YouTube channel. She created an automated process for identification and deletion of spams. While leading all visual branding for Instagram, and playing a huge role in the platform's growth from 76k to 1.4 Million followers in a year. It is surprising at times for me to realize that she did this at the age of 21 years!!",
   },
   {
     name: 'Rimjhim Bhadani',
