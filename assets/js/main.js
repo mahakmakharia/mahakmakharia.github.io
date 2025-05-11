@@ -1,344 +1,259 @@
-(function ($) {
-  "use strict";
-
-  //===== Prealoder
-
-  $(window).on("load", function (event) {
-    $(".preloader").delay(500).fadeOut(500);
-  });
-
-  //===== Mobile Menu
-
-  $(".navbar-toggler").on("click", function () {
-    $(this).toggleClass("active");
-  });
-
-  $(".navbar-nav a").on("click", function () {
-    $(".navbar-toggler").removeClass("active");
-  });
-
-  //===== close navbar-collapse when a  clicked
-
-  $(".navbar-nav a").on("click", function () {
-    $(".navbar-collapse").removeClass("show");
-  });
-
-  //===== Sticky
-
-  $(window).on("scroll", function (event) {
-    var scroll = $(window).scrollTop();
-    if (scroll < 10) {
-      $(".navigation").removeClass("sticky");
-    } else {
-      $(".navigation").addClass("sticky");
+const q$ = {
+  elem: null,
+  select(selector, element) {
+    const mountElem = element || document;
+    if (selector) this.elem = mountElem.querySelector(selector);
+    return this;
+  },
+  selectAll(selector, element) {
+    const mountElem = element || document;
+    if (selector) this.elem = mountElem.querySelectorAll(selector);
+    return this;
+  },
+  selectById(selector, element) {
+    const mountElem = element || document;
+    if (selector) this.elem = mountElem.getElementById(selector);
+    return this;
+  },
+  modifyInnerHTML(content) {
+    if (this.elem) {
+      this.elem.innerHTML = content;
     }
-  });
-
-  //===== Section Menu Active
-
-  var scrollLink = $(".page-scroll");
-  // Active link switching
-  $(window).scroll(function () {
-    var scrollbarLocation = $(this).scrollTop();
-
-    scrollLink.each(function () {
-      var sectionOffset = $(this.hash).offset().top - 73;
-
-      if (sectionOffset <= scrollbarLocation) {
-        $(this).parent().addClass("active");
-        $(this).parent().siblings().removeClass("active");
+    return this;
+  },
+  modifyInnerHTMLAll(content) {
+    this.elem?.forEach((item) => {
+      if (item) {
+        item.innerHTML = content;
       }
     });
-  });
-
-  // Parallaxmouse js
-
-  function parallaxMouse() {
-    if ($("#parallax").length) {
-      var scene = document.getElementById("parallax");
-      var parallax = new Parallax(scene);
+    return this;
+  },
+  addClass(...className) {
+    this.elem?.classList?.add(...className);
+    return this;
+  },
+  addClassAll(...className) {
+    this.elem?.forEach((item) => item?.classList?.add(...className));
+    return this;
+  },
+  removeClass(className) {
+    this.elem?.classList?.remove(className);
+    return this;
+  },
+  removeClassAll(className) {
+    this.elem?.forEach((item) => item?.classList?.remove(className));
+    return this;
+  },
+  modifyTextContent(content) {
+    if (content && this.elem) {
+      this.elem.textContent = content;
     }
-  }
-  parallaxMouse();
-
-  //===== Progress Bar
-
-  if ($(".progress-line").length) {
-    $(".progress-line").appear(
-      function () {
-        var el = $(this);
-        var percent = el.data("width");
-        $(el).css("width", percent + "%");
-      },
-      { accY: 0 }
-    );
-  }
-
-  //===== Counter Up
-
-  $(".counter").counterUp({
-    delay: 10,
-    time: 1600,
-  });
-
-  //===== Magnific Popup
-
-  $(".image-popup").magnificPopup({
-    type: "image",
-    gallery: {
-      enabled: true,
-    },
-  });
-
-  //===== Back to top
-
-  // Show or hide the sticky footer button
-  $(window).on("scroll", function (event) {
-    if ($(this).scrollTop() > 600) {
-      $(".back-to-top").fadeIn(200);
-    } else {
-      $(".back-to-top").fadeOut(200);
-    }
-  });
-
-  //Animate the scroll to yop
-  $(".back-to-top").on("click", function (event) {
-    event.preventDefault();
-
-    $("html, body").animate(
-      {
-        scrollTop: 0,
-      },
-      1500
-    );
-  });
-
-  //=====
-})(jQuery);
-
-$(document).ready(function () {
-  "use strict";
-
-  var window_width = $(window).width(),
-    window_height = window.innerHeight,
-    header_height = $(".default-header").height(),
-    header_height_static = $(".site-header.static").outerHeight(),
-    fitscreen = window_height - header_height;
-
-  $(".fullscreen").css("height", window_height);
-  $(".fitscreen").css("height", fitscreen);
-
-  //------- Active Nice Select --------//
-
-  $(".navbar-nav li.dropdown").hover(
-    function () {
-      $(this).find(".dropdown-menu").stop(true, true).delay(200).fadeIn(500);
-    },
-    function () {
-      $(this).find(".dropdown-menu").stop(true, true).delay(200).fadeOut(500);
-    }
-  );
-
-  $(".img-pop-up").magnificPopup({
-    type: "image",
-    gallery: {
-      enabled: true,
-    },
-  });
-
-  // Search Toggle
-  $("#search_input_box").hide();
-  $("#search").on("click", function () {
-    $("#search_input_box").slideToggle();
-    $("#search_input").focus();
-  });
-  $("#close_search").on("click", function () {
-    $("#search_input_box").slideUp(500);
-  });
-
-  /*=================================
-    Javascript for banner area carousel
-    ==================================*/
-  $(".active-banner-slider").owlCarousel({
-    items: 1,
-    autoplay: false,
-    autoplayTimeout: 5000,
-    loop: true,
-    nav: true,
-    navText: [
-      "<img src='img/banner/prev.png'>",
-      "<img src='img/banner/next.png'>",
-    ],
-    dots: false,
-  });
-
-  /*=================================
-    Javascript for product area carousel
-    ==================================*/
-  $(".active-product-area").owlCarousel({
-    items: 1,
-    autoplay: false,
-    autoplayTimeout: 5000,
-    loop: true,
-    nav: true,
-    navText: [
-      "<img src='img/product/prev.png'>",
-      "<img src='img/product/next.png'>",
-    ],
-    dots: false,
-  });
-
-  /*=================================
-    Javascript for single product area carousel
-    ==================================*/
-  $(".s_Product_carousel").owlCarousel({
-    items: 1,
-    autoplay: false,
-    autoplayTimeout: 5000,
-    loop: true,
-    nav: false,
-    dots: true,
-  });
-
-  /*=================================
-    Javascript for exclusive area carousel
-    ==================================*/
-  $(".active-exclusive-product-slider").owlCarousel({
-    items: 1,
-    autoplay: false,
-    autoplayTimeout: 5000,
-    loop: true,
-    nav: true,
-    navText: [
-      "<img src='img/product/prev.png'>",
-      "<img src='img/product/next.png'>",
-    ],
-    dots: false,
-  });
-
-  // Select all links with hashes
-  $('.main-menubar a[href*="#"]')
-    // Remove links that don't actually link to anything
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function (event) {
-      // On-page links
-      if (
-        location.pathname.replace(/^\//, "") ==
-          this.pathname.replace(/^\//, "") &&
-        location.hostname == this.hostname
-      ) {
-        // Figure out element to scroll to
-        var target = $(this.hash);
-        target = target.length
-          ? target
-          : $("[name=" + this.hash.slice(1) + "]");
-        // Does a scroll target exist?
-        if (target.length) {
-          // Only prevent default if animation is actually gonna happen
-          event.preventDefault();
-          $("html, body").animate(
-            {
-              scrollTop: target.offset().top - 70,
-            },
-            1000,
-            function () {
-              // Callback after animation
-              // Must change focus!
-              var $target = $(target);
-              $target.focus();
-              if ($target.is(":focus")) {
-                // Checking if the target was focused
-                return false;
-              } else {
-                $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
-                $target.focus(); // Set focus again
-              }
-            }
-          );
+    return this;
+  },
+  modifyTextContentAll(content) {
+    if (content) {
+      this.elem?.forEach((item) => {
+        if (item) {
+          item.textContent = content;
         }
+      });
+    }
+    return this;
+  },
+  setAttribute(attrKey, attrVal) {
+    if (attrKey && attrVal) {
+      this.elem?.setAttribute(attrKey, attrVal);
+    }
+    return this;
+  },
+  setAttributeAll(attrKey, attrVal) {
+    if (attrKey && attrVal) {
+      this.elem?.forEach((item) => {
+        item?.setAttribute(attrKey, attrVal);
+      });
+    }
+    return this;
+  },
+  setStyleProperty(attrKey, attrVal, optional) {
+    if (attrKey && attrVal) {
+      this.elem?.style?.setProperty(attrKey, attrVal, optional);
+    }
+    return this;
+  },
+  setStylePropertyAll(attrKey, attrVal, optional) {
+    if (attrKey && attrVal) {
+      this.elem?.forEach((item) => {
+        item?.style?.setProperty(attrKey, attrVal, optional);
+      });
+    }
+    return this;
+  },
+  removeAttribute(attribute) {
+    if (this?.elem && attribute) {
+      this?.elem.removeAttribute(attribute);
+    }
+    return this;
+  },
+  removeAttributeAll(attribute) {
+    if (attribute) {
+      this.elem?.forEach((item) => {
+        item?.removeAttribute(attribute);
+      });
+    }
+    return this;
+  },
+  setDataAttribute(attrKey, attrVal) {
+    if (attrKey && attrVal) {
+      if (this.elem) {
+        this.elem.dataset[attrKey] = attrVal;
       }
-    });
-});
-
-// ES6 Class
-class TypeWriter {
-  constructor(txtElement, words, wait = 3000) {
-    this.txtElement = txtElement;
-    this.words = words;
-    this.txt = "";
-    this.wordIndex = 0;
-    this.wait = parseInt(wait, 10);
-    this.type();
-    this.isDeleting = false;
-  }
-
-  type() {
-    // Current index of word
-    const current = this.wordIndex % this.words.length;
-    // Get full text of current word
-    const fullTxt = this.words[current];
-
-    // Check if deleting
-    if (this.isDeleting) {
-      // Remove char
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-      // Add char
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
-
-    // Insert txt into element
-    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-
-    // Initial Type Speed
-    let typeSpeed = 300;
-
-    if (this.isDeleting) {
-      typeSpeed /= 2;
+    return this;
+  },
+  setDataAttributeAll(attrKey, attrVal) {
+    if (attrKey && attrVal) {
+      this.elem?.forEach((item) => {
+        if (item) {
+          item.dataset[attrKey] = attrVal;
+        }
+      });
     }
-
-    // If word is complete
-    if (!this.isDeleting && this.txt === fullTxt) {
-      // Make pause at end
-      typeSpeed = this.wait;
-      // Set delete to true
-      this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === "") {
-      this.isDeleting = false;
-      // Move to next word
-      this.wordIndex++;
-      // Pause before start typing
-      typeSpeed = 500;
+    return this;
+  },
+  getTemplateContent() {
+    if (this.elem) {
+      this.elem = document.importNode(this.elem.content, true);
     }
+    return this;
+  },
+};
 
-    setTimeout(() => this.type(), typeSpeed);
-  }
+const workItems = [
+  {
+    company: 'pixxel.space',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtSy7Pi3n8rxLMeMoPnOUU6qZkEGZFvs4mxA&s',
+    time: 'Oct 2024 - Present',
+    desc: "Building the world's most advanced earth observation platform using Hyperspectral Images and Artificial Intelligence.",
+    mainImg: '',
+    sideImg: '',
+    modalContent: '',
+  },
+  {
+    company: 'getsimpl.com',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0_ZyEo118FEVM-LU-hhlNgJWcG12HrvJ_8w&s',
+    time: 'Nov 2023 - Oct 2024',
+    desc: "Built the transaction platform for one of India's leading BNPL platforms, enabling customers to make purchases and pay later with ease.",
+    mainImg: '',
+    sideImg: '',
+    modalContent: '',
+  },
+  {
+    company: 'mydukaan.io',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6PDAuFtVIVolwS0WHxKTD86qtItQtCDrI7g&s',
+    time: 'Nov 2021 - Nov 2023',
+    desc: 'Built the theme engine for dukaan, enabling users to create and customize their e-commerce stores with ease.',
+    mainImg: '',
+    sideImg: '',
+    modalContent: '',
+  },
+];
+
+const feedbacks = [
+  {
+    name: 'Harikrishnan',
+    position: 'Senior Product Manager, Simpl',
+    img: 'https://media.licdn.com/dms/image/v2/D5603AQH5r6ObwCHedw/profile-displayphoto-shrink_100_100/B56Za17wbNGgAY-/0/1746809064645?e=1752105600&v=beta&t=J0VDYQG46c7jR0BrygPOnu7rgSkpxdLoqyjUsovs2LA',
+    review:
+      'Mahak worked with me on numerous key initiatives at Simpl. She is highly collaborative and has a deep understanding of user experience which is a great skillset to have as a developer. In addition, Mahak can come up with innovative solutions while showcasing a good hold over tech while also understanding business goals. Mahak would be a great addition to any team!',
+  },
+  {
+    name: 'Dawar Mir',
+    position: 'Head of Product Design, Dukaan',
+    img: 'https://media.licdn.com/dms/image/v2/D4D03AQGNgKFSKxdf0g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1670232195128?e=1752105600&v=beta&t=xtTly9C5RimV76Y7N4vacKXrxz0SwlRbnoL6TaPNz2M',
+    review:
+      "Working closely with Mahak, I've been continually impressed by her ingenious solutions and her unwavering commitment to pixel-perfect designs. Her smart approach to problem-solving sets her apart, making her an invaluable asset to any team. I highly recommend her!",
+  },
+  {
+    name: 'Atul Dubey',
+    position: 'VP of Engineering, Dukaan',
+    img: 'https://media.licdn.com/dms/image/v2/C4E03AQH57jimFPS1ow/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1516437553415?e=1752105600&v=beta&t=UrKcMajKwnyTSxIxZFUoYpo87ma7AeuNz9RxbsXEoMM',
+    review:
+      "Mahak is one of the most talented and hand-working engineers that I've worked with - always keen to learn and grow more.",
+  },
+  {
+    name: 'Raveesh Agarwal',
+    position: 'Director of Engineering - Mobile, Highlevel',
+    img: 'https://media.licdn.com/dms/image/v2/D4D03AQFu2JOnmoTgtQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1704027308734?e=1752105600&v=beta&t=4gGjiyO83lHp4zPat2x5ODEDva8lMZ_mk_kq2cngo3M',
+    review:
+      "Mahak is a well organized diligent learner, who's good at designing and developing web applications. She's a highly dedicated person who tries her best to deliver quality work on time. On top of being a great developer, she's also an easy going person which makes it easier to work with her. I wish her luck for all her future endeavors. I am sure she will always succeed.",
+  },
+  {
+    name: 'Ankur Warikoo',
+    position: 'Entrepreneur, Investor, Mentor',
+    img: 'assets/images/ankur.webp',
+    review:
+      "Mahak is one of the most diligent resources we've had on the team. Her original role was that of a designer, she was more of a software engineer. A proud moment was when she solved a persistent problem on our YouTube channel. She created an automated process for identification and deletion of spams. While leading all visual branding for Instagram, and playing a huge role in the platform's growth from 76k to 1.4 Million followers in a year. It is surprising at times for me to realize that she did this at the age of 21 years!!",
+  },
+  {
+    name: 'Rimjhim Bhadani',
+    position: 'Software Engineer, Google',
+    img: 'https://media.licdn.com/dms/image/v2/C5603AQGOXiNX1Av7UQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1625139912572?e=1752105600&v=beta&t=s3D5yA_PhI_-5QjZDj2op4YBQtspOPYGc7Z6AAKKyqg',
+    review:
+      "I have known Mahak for more than a year now and have always been surprised and impressed by her hardwork and creativity. Her work management skills are far beyond appreciation. She flawlessly blends into multiple roles. She was one of the most contributing core members for DSC IEM, always ready to work on new ideas and whatever else is assigned to her. She singlehandedly managed the design requirements of the club and always completed the work with perfection. Mahak's welcoming nature always makes it pleasant to work with her. I wish her good luck for all her future endeavours.",
+  },
+];
+
+const renderWorkItems = () => {
+  const workItemsContainer = q$.select('.work-items-container').elem;
+
+  workItems.forEach((item) => {
+    const template = q$.selectById('work-item').getTemplateContent().elem;
+    q$.select('img', template).setAttribute('src', item.logo);
+    q$.select('.name', template).modifyTextContent(item.company);
+    q$.select('a', template).setAttribute('href', `https://${item.company}`);
+    q$.select('.time', template).modifyTextContent(`(${item.time})`);
+    q$.select('.desc', template).modifyTextContent(item.desc);
+    workItemsContainer.appendChild(template);
+  });
+};
+
+const renderFeedbacks = () => {
+  const feedbackContainer = q$.select('.feedback-container').elem;
+
+  feedbacks.forEach((item) => {
+    const template = q$.selectById('feedback-item').getTemplateContent().elem;
+    q$.select('img', template).setAttribute('src', item.img);
+    q$.select('.name', template).modifyTextContent(item.name);
+    q$.select('.position', template).modifyTextContent(item.position);
+    q$.select('.desc', template).modifyTextContent(item.review);
+    feedbackContainer.appendChild(template);
+  });
+};
+
+const sections = q$.selectAll('section').elem;
+const navLinks = q$.selectAll('.nav li').elem;
+
+function handleScroll() {
+  let scrollPosition = window.scrollY + window.innerHeight / 2;
+
+  sections.forEach((section) => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute('id');
+
+    if (scrollPosition >= top && scrollPosition < top + height) {
+      navLinks.forEach((link) => link.classList.remove('active'));
+      console.log('here', id, q$.select(`.nav li a[href="#${id}"]`).elem);
+      q$.select(`.nav-${id}`).addClass('active');
+    }
+  });
 }
 
-// Init On DOM Load
-document.addEventListener("DOMContentLoaded", init);
+window.addEventListener('scroll', handleScroll);
 
-// Init App
-function init() {
-  const txtElement = document.querySelector(".txt-type");
-  const words = JSON.parse(txtElement.getAttribute("data-words"));
-  const wait = txtElement.getAttribute("data-wait");
-  // Init TypeWriter
-  new TypeWriter(txtElement, words, wait);
-}
-
-//------- Hide show designs/projects --------//
-
-var design = document.getElementById("design");
-var dev = document.getElementById("dev");
-
-document.getElementById("design-button").addEventListener("click" , function () {
-  design.style.display = "flex";
-  dev.style.display = "none";
-});
-
-document.getElementById("dev-button").addEventListener("click" , function () {
-  dev.style.display = "flex";
-  design.style.display = "none";
+document.addEventListener('DOMContentLoaded', () => {
+  renderWorkItems();
+  renderFeedbacks();
+  handleScroll();
 });
