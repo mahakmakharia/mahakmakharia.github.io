@@ -163,28 +163,28 @@ const feedbacks = [
   {
     name: 'Harikrishnan',
     position: 'Senior Product Manager, Simpl',
-    img: 'https://media.licdn.com/dms/image/v2/D5603AQH5r6ObwCHedw/profile-displayphoto-shrink_100_100/B56Za17wbNGgAY-/0/1746809064645?e=1752105600&v=beta&t=J0VDYQG46c7jR0BrygPOnu7rgSkpxdLoqyjUsovs2LA',
+    img: 'assets/images/hari.webp',
     review:
       'Mahak worked with me on numerous key initiatives at Simpl. She is highly collaborative and has a deep understanding of user experience which is a great skillset to have as a developer. In addition, Mahak can come up with innovative solutions while showcasing a good hold over tech while also understanding business goals. Mahak would be a great addition to any team!',
   },
   {
     name: 'Dawar Mir',
     position: 'Head of Product Design, Dukaan',
-    img: 'https://media.licdn.com/dms/image/v2/D4D03AQGNgKFSKxdf0g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1670232195128?e=1752105600&v=beta&t=xtTly9C5RimV76Y7N4vacKXrxz0SwlRbnoL6TaPNz2M',
+    img: 'assets/images/dawar.webp',
     review:
       "Working closely with Mahak, I've been continually impressed by her ingenious solutions and her unwavering commitment to pixel-perfect designs. Her smart approach to problem-solving sets her apart, making her an invaluable asset to any team. I highly recommend her!",
   },
   {
     name: 'Atul Dubey',
     position: 'VP of Engineering, Dukaan',
-    img: 'https://media.licdn.com/dms/image/v2/C4E03AQH57jimFPS1ow/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1516437553415?e=1752105600&v=beta&t=UrKcMajKwnyTSxIxZFUoYpo87ma7AeuNz9RxbsXEoMM',
+    img: 'assets/images/atul.webp',
     review:
       "Mahak is one of the most talented and hand-working engineers that I've worked with - always keen to learn and grow more.",
   },
   {
     name: 'Raveesh Agarwal',
     position: 'Director of Engineering - Mobile, Highlevel',
-    img: 'https://media.licdn.com/dms/image/v2/D4D03AQFu2JOnmoTgtQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1704027308734?e=1752105600&v=beta&t=4gGjiyO83lHp4zPat2x5ODEDva8lMZ_mk_kq2cngo3M',
+    img: 'assets/images/raveesh.webp',
     review:
       "Mahak is a well organized diligent learner, who's good at designing and developing web applications. She's a highly dedicated person who tries her best to deliver quality work on time. On top of being a great developer, she's also an easy going person which makes it easier to work with her. I wish her luck for all her future endeavors. I am sure she will always succeed.",
   },
@@ -198,7 +198,7 @@ const feedbacks = [
   {
     name: 'Rimjhim Bhadani',
     position: 'Software Engineer, Google',
-    img: 'https://media.licdn.com/dms/image/v2/C5603AQGOXiNX1Av7UQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1625139912572?e=1752105600&v=beta&t=s3D5yA_PhI_-5QjZDj2op4YBQtspOPYGc7Z6AAKKyqg',
+    img: 'assets/images/rimjhim.webp',
     review:
       "I have known Mahak for more than a year now and have always been surprised and impressed by her hardwork and creativity. Her work management skills are far beyond appreciation. She flawlessly blends into multiple roles. She was one of the most contributing core members for DSC IEM, always ready to work on new ideas and whatever else is assigned to her. She singlehandedly managed the design requirements of the club and always completed the work with perfection. Mahak's welcoming nature always makes it pleasant to work with her. I wish her good luck for all her future endeavours.",
   },
