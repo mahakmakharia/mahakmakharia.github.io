@@ -132,29 +132,29 @@ const q$ = {
 const workItems = [
   {
     company: 'pixxel.space',
-    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtSy7Pi3n8rxLMeMoPnOUU6qZkEGZFvs4mxA&s',
+    logo: 'assets/images/pixxel.png',
     time: 'Oct 2024 - Present',
     desc: "Building the world's most advanced earth observation platform using Hyperspectral Images and Artificial Intelligence.",
-    mainImg: '',
-    sideImg: '',
+    mainImg: 'assets/images/pixxel-2.webp',
+    sideImg: 'assets/images/pixxel-1.webp',
     modalContent: '',
   },
   {
     company: 'getsimpl.com',
-    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0_ZyEo118FEVM-LU-hhlNgJWcG12HrvJ_8w&s',
+    logo: 'assets/images/simpl.png',
     time: 'Nov 2023 - Oct 2024',
     desc: "Built the transaction platform for one of India's leading BNPL platforms, enabling customers to make purchases and pay later with ease.",
-    mainImg: '',
-    sideImg: '',
+    mainImg: 'assets/images/simpl-2.webp',
+    sideImg: 'assets/images/simpl-1.webp',
     modalContent: '',
   },
   {
     company: 'mydukaan.io',
-    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6PDAuFtVIVolwS0WHxKTD86qtItQtCDrI7g&s',
+    logo: 'assets/images/dukaan.png',
     time: 'Nov 2021 - Nov 2023',
     desc: 'Built the theme engine for dukaan, enabling users to create and customize their e-commerce stores with ease.',
-    mainImg: '',
-    sideImg: '',
+    mainImg: 'assets/images/dukaan-2.webp',
+    sideImg: 'assets/images/dukaan-1.webp',
     modalContent: '',
   },
 ];
@@ -214,6 +214,8 @@ const renderWorkItems = () => {
     q$.select('a', template).setAttribute('href', `https://${item.company}`);
     q$.select('.time', template).modifyTextContent(`(${item.time})`);
     q$.select('.desc', template).modifyTextContent(item.desc);
+    q$.select('.main-img', template).setAttribute('src', item.mainImg);
+    q$.select('.side-img', template).setAttribute('src', item.sideImg);
     workItemsContainer.appendChild(template);
   });
 };
