@@ -574,7 +574,7 @@ span.highlight {
   height: 400px;
   aspect-ratio: 4/5;
   transform: rotate(-2deg);
-  border-radius: 30px;
+  border-radius: 10px !important;
 }
 
 .work-item .main-img {
