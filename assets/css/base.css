@@ -295,4 +295,7 @@ svg {
   .xl-row {
     flex-direction: row;
   }
+  .xl-row-reverse {
+    flex-direction: row-reverse;
+  }
 }

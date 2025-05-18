@@ -45,8 +45,8 @@ section {
 }
 
 .content-section {
-  min-height: 80vh;
-  padding: 84px 24px 24px 24px;
+  min-height: min-content;
+  padding: 86px 24px 48px 24px;
   width: 100%;
 }
 
@@ -83,28 +83,33 @@ span.highlight {
   }
 }
 
-.intro-section .subtitle {
-  font-size: 18px;
-}
-.intro-section {
-  padding: 20px;
-  min-height: 100vh;
+.intro-wrapper {
   background: radial-gradient(
     circle at top,
     #00ffaedf 0%,
     #22ffb95c 40%,
     transparent 100%
   );
+}
+.intro-section {
+  max-width: 1200px;
+  padding: 84px 24px 48px 24px;
+  min-height: 95vh;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   flex: 1;
+  position: relative;
+  margin: 0 auto;
 }
 .intro-section .title {
   font-size: 72px;
   line-height: 72px;
   letter-spacing: -3px;
   margin-left: -3px;
+}
+.intro-section .subtitle {
+  font-size: 18px;
 }
 .intro-section img {
   height: auto;
@@ -116,31 +121,31 @@ span.highlight {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
 }
 .intro-section .img1 {
-  top: 8%;
-  left: 3%;
+  top: 12%;
+  left: 5%;
   width: calc(100% / 3);
   animation: popIn 0.8s ease-in forwards;
   transform: scale(0);
 }
 .intro-section .img2 {
-  top: 12%;
-  left: 42%;
+  top: 16%;
+  left: 44%;
   width: calc(100% / 2);
   animation: popIn 0.8s ease-in forwards;
   animation-delay: 0.3s;
   transform: scale(0);
 }
 .intro-section .img3 {
-  top: 36%;
-  left: 4%;
+  top: 38%;
+  left: 7%;
   width: calc(100% / 3);
   animation: popIn 0.8s ease-in forwards;
   animation-delay: 0.6s;
   transform: scale(0);
 }
 .intro-section .img4 {
-  top: 32%;
-  left: 42%;
+  top: 36%;
+  left: 44%;
   width: calc(100% / 2);
   animation: popIn 0.8s ease-in forwards;
   animation-delay: 0.9s;
@@ -167,13 +172,13 @@ span.highlight {
   border-radius: 4px;
 }
 .image-position {
-  height: 200px;
+  height: 23vh;
 }
 .work-item .images-wrapper {
   position: absolute;
-  bottom: -50px;
+  bottom: -12px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-46%);
 }
 .work-item .images-wrapper img {
   border-radius: 16px;
@@ -183,13 +188,12 @@ span.highlight {
   display: none;
 }
 .work-item .main-img {
-  height: 200px;
+  height: 23vh;
   aspect-ratio: 16/9;
   transform: rotate(1.5deg);
-  margin-left: 12px;
 }
 .work-item:hover .images-wrapper {
-  bottom: -25px;
+  bottom: -6px;
   transition: all 0.1s ease-in;
 }
 .work-item:hover .side-img {
@@ -360,10 +364,10 @@ span.highlight {
 .socials-wrapper {
   font-size: 20px;
   font-weight: 400;
-  padding: 16px;
+  padding: 28px 20px;
   border-radius: 12px;
   background-color: var(--tertiary-black);
-  gap: 16px;
+  gap: 20px;
 }
 .socials-wrapper .email svg {
   width: 24px;
@@ -406,7 +410,8 @@ span.highlight {
   .content-section {
     min-height: 100vh;
     padding: 120px 32px 32px 32px;
-    width: 80%;
+    width: 100%;
+    max-width: 1140px;
     margin: 0 auto;
   }
 
@@ -421,6 +426,10 @@ span.highlight {
     left: 62%;
   }
 
+  .intro-section {
+    min-height: 100vh;
+  }
+
   .intro-section .subtitle {
     font-size: 36px;
     line-height: 44px;
@@ -429,42 +438,42 @@ span.highlight {
     padding: 90px 40px;
   }
   .intro-section .title {
-    font-size: 176px;
-    line-height: 176px;
+    font-size: 140px;
+    line-height: 140px;
     letter-spacing: -4px;
     margin-left: -8px;
   }
   .intro-section img {
     border-width: 4px;
-    border-radius: 20px;
+    border-radius: 16px;
   }
   .intro-section .img1 {
-    top: 8%;
-    left: 3%;
-    width: calc(100% / 6);
+    top: 12%;
+    left: 0%;
+    width: calc(100% / 5.5);
     animation: popIn 0.8s ease-in forwards;
     transform: scale(0);
   }
   .intro-section .img2 {
-    top: 15%;
-    left: 23%;
-    width: calc(100% / 4);
+    top: 18%;
+    left: 22%;
+    width: calc(100% / 3.5);
     animation: popIn 0.8s ease-in forwards;
     animation-delay: 0.3s;
     transform: scale(0);
   }
   .intro-section .img3 {
-    top: 19%;
-    left: 51%;
-    width: calc(100% / 6);
+    top: 24%;
+    left: 53%;
+    width: calc(100% / 5.5);
     animation: popIn 0.8s ease-in forwards;
     animation-delay: 0.6s;
     transform: scale(0);
   }
   .intro-section .img4 {
-    top: 14%;
-    left: 70%;
-    width: calc(100% / 4);
+    top: 18%;
+    left: 74%;
+    width: calc(100% / 3.5);
     animation: popIn 0.8s ease-in forwards;
     animation-delay: 0.9s;
     transform: scale(0);
@@ -481,6 +490,15 @@ span.highlight {
   }
   .image-position {
     height: 400px;
+  }
+  .work-item .images-wrapper {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .work-item:hover .images-wrapper {
+    bottom: -25px;
   }
   .work-item .side-img {
     display: block;
