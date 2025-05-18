@@ -94,7 +94,7 @@ span.highlight {
 .intro-section {
   max-width: 1200px;
   padding: 84px 24px 48px 24px;
-  min-height: 95vh;
+  min-height: 98vh;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -121,14 +121,14 @@ span.highlight {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
 }
 .intro-section .img1 {
-  top: 12%;
+  top: 14%;
   left: 5%;
   width: calc(100% / 3);
   animation: popIn 0.8s ease-in forwards;
   transform: scale(0);
 }
 .intro-section .img2 {
-  top: 16%;
+  top: 17%;
   left: 44%;
   width: calc(100% / 2);
   animation: popIn 0.8s ease-in forwards;
@@ -136,16 +136,16 @@ span.highlight {
   transform: scale(0);
 }
 .intro-section .img3 {
-  top: 38%;
-  left: 7%;
+  top: 36%;
+  left: 60%;
   width: calc(100% / 3);
   animation: popIn 0.8s ease-in forwards;
   animation-delay: 0.6s;
   transform: scale(0);
 }
 .intro-section .img4 {
-  top: 36%;
-  left: 44%;
+  top: 38%;
+  left: 5%;
   width: calc(100% / 2);
   animation: popIn 0.8s ease-in forwards;
   animation-delay: 0.9s;
