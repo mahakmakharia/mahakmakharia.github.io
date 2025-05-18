@@ -17,6 +17,7 @@
   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
 
   <!--====== Style css ======-->
+  <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,11 +58,11 @@
     <img class="img2" src="assets/images/img2.webp" />
     <img class="img3" src="assets/images/img3.webp" />
     <img class="img4" src="assets/images/img4.webp" />
-    <h6 class="subtitle medium text-36_44 b-secondary px-40">
+    <h6 class="subtitle medium b-secondary">
       Hello! I am your trusted web engineer,
       <br /> building scalable products and solutions.
     </h6>
-    <h1 class="title heading px-40">Mahak Makharia</h1>
+    <h1 class="title heading">Mahak Makharia</h1>
     <!-- <div class="flex w-100 a-end j-end"><video src="assets/images/title-highlight.webm" autoplay preload="auto"
           playsinline muted></video> -->
 
@@ -74,12 +75,12 @@
   </section>
   <section class="content-section" id="feedback">
     <h2 class="sub-heading">Praise for my work <span class="highlight">People love working with me!</span></h2>
-    <div class="feedback-container flex a-start j-start f-wrap"></div>
+    <div class="feedback-container flex a-start gap-16 j-start f-wrap"></div>
   </section>
   <section class="content-section" id="story">
     <h2 class="sub-heading">My story <span class="highlight">A short overview</span></h2>
     <div class="flex d-column w-100 gap-16">
-      <div class="story-wrapper flex a-center w-100">
+      <div class="story-wrapper gap-12 flex d-column xl-row a-center w-100">
         <div class="story-item text">I was born in a business family in Kolkata. At 14, I started working
           part-time with my father. Learnt sales and communication. By age 15, I could run our business
           independently. It instilled a strong sense of responsibility early in life. While pursuing engineering, I
@@ -90,7 +91,7 @@
         </div>
         <div class="story-item img"> <img src="assets/images/dukaan.webp" loading="lazy" alt="team-dukaan" /></div>
       </div>
-      <div class="story-wrapper flex a-center w-100">
+      <div class="story-wrapper gap-12 flex d-column xl-row a-center w-100">
         <div class="story-item img"> <img src="assets/images/mission.webp" loading="lazy" alt="mission" /></div>
         <div class="story-item text">
           I bring a rare mix of engineering rigour and design intuition. My business background and empathetic nature
@@ -107,11 +108,10 @@
 
   </section>
   <section class="content-section" id="chat">
-    <h2 class="sub-heading">Let's start a chat?<span class="highlight">@mahakmakharia on all
-        platforms</span></h2>
+    <h2 class="sub-heading">Let's start a chat?<span class="highlight">@mahakmakharia </span></h2>
     <div></div>
     <a class="connect-btn" href="mailto:makhariamahak@gmail.com">Connect</a>
-    <div class="w-100 socials-wrapper flex j-between a-center w-100">
+    <div class="w-100 socials-wrapper flex d-column xl-row j-between a-center w-100">
       <div class="email flex gap-8 a-center flex-1">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="30px"
           width="30px" version="1.1" id="Layer_1" viewBox="0 0 491.022 491.022" xml:space="preserve">
@@ -149,9 +149,11 @@
   <template id="work-item">
     <div class="work-item">
       <div class="flex j-between a-center">
-        <div class="title flex a-end gap-12">
-          <img class="logo" loading="lazy" />
-          <a class="name"></a>
+        <div class="title flex d-column xl-row a-start gap-8">
+          <div class="flex a-center gap-12">
+            <img class="logo" loading="lazy" />
+            <a class="name"></a>
+          </div>
           <p class="time"></p>
         </div>
         <div class="svg-wrapper">
