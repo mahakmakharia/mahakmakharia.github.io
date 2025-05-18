@@ -495,7 +495,7 @@ span.highlight {
 }
 
 .intro-section img {
-  width: 230px;
+  width: 240px;
   height: auto;
   padding: 3px;
   border-radius: 20px;
@@ -507,22 +507,23 @@ span.highlight {
 
 .intro-section .img1 {
   top: 8%;
-  left: 5%;
+  left: 3%;
   animation: popIn 1s ease-in forwards;
   transform: scale(0);
 }
 
 .intro-section .img2 {
-  top: 22%;
-  left: 30%;
+  top: 15%;
+  left: 23%;
+  width: 360px;
   animation: popIn 1s ease-in forwards;
   animation-delay: 0.4s;
   transform: scale(0);
 }
 
 .intro-section .img3 {
-  top: 12%;
-  left: 54%;
+  top: 19%;
+  left: 50%;
   animation: popIn 1s ease-in forwards;
   animation-delay: 0.8s;
   transform: scale(0);
@@ -530,7 +531,8 @@ span.highlight {
 
 .intro-section .img4 {
   top: 14%;
-  left: 78%;
+  left: 70%;
+  width: 380px;
   animation: popIn 1s ease-in forwards;
   animation-delay: 1.2s;
   transform: scale(0);
