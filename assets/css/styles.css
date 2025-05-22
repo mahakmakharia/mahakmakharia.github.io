@@ -93,8 +93,8 @@ span.highlight {
 }
 .intro-section {
   max-width: 1200px;
-  padding: 84px 24px 48px 24px;
-  min-height: 98vh;
+  padding: 84px 24px 24px 24px;
+  min-height: 100vh;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -122,31 +122,31 @@ span.highlight {
 }
 .intro-section .img1 {
   top: 14%;
-  left: 5%;
+  left: 8%;
   width: calc(100% / 3);
   animation: popIn 0.8s ease-in forwards;
   transform: scale(0);
 }
 .intro-section .img2 {
-  top: 17%;
-  left: 44%;
-  width: calc(100% / 2);
+  top: 12%;
+  left: 50%;
+  width: calc(100% / 3);
   animation: popIn 0.8s ease-in forwards;
   animation-delay: 0.3s;
   transform: scale(0);
 }
 .intro-section .img3 {
-  top: 36%;
-  left: 60%;
+  top: 37%;
+  left: 58%;
   width: calc(100% / 3);
   animation: popIn 0.8s ease-in forwards;
   animation-delay: 0.6s;
   transform: scale(0);
 }
 .intro-section .img4 {
-  top: 38%;
-  left: 5%;
-  width: calc(100% / 2);
+  top: 39%;
+  left: 15%;
+  width: calc(100% / 3);
   animation: popIn 0.8s ease-in forwards;
   animation-delay: 0.9s;
   transform: scale(0);
@@ -436,7 +436,7 @@ span.highlight {
     line-height: 44px;
   }
   .intro-section {
-    padding: 90px 40px;
+    padding: 64px 40px;
   }
   .intro-section .title {
     font-size: 140px;
@@ -447,34 +447,35 @@ span.highlight {
   .intro-section img {
     border-width: 4px;
     border-radius: 16px;
+    object-fit: fill !important;
   }
   .intro-section .img1 {
-    top: 12%;
+    top: 12vh;
     left: 0%;
-    width: calc(100% / 5.5);
+    width: calc(100% / 5);
     animation: popIn 0.8s ease-in forwards;
     transform: scale(0);
   }
   .intro-section .img2 {
-    top: 18%;
-    left: 22%;
-    width: calc(100% / 3.5);
+    top: 16vh;
+    left: 26%;
+    width: calc(100% / 5);
     animation: popIn 0.8s ease-in forwards;
     animation-delay: 0.3s;
     transform: scale(0);
   }
   .intro-section .img3 {
-    top: 24%;
-    left: 53%;
-    width: calc(100% / 5.5);
+    top: 16vh;
+    left: 52%;
+    width: calc(100% / 5);
     animation: popIn 0.8s ease-in forwards;
     animation-delay: 0.6s;
     transform: scale(0);
   }
   .intro-section .img4 {
-    top: 18%;
-    left: 74%;
-    width: calc(100% / 3.5);
+    top: 12vh;
+    left: 78%;
+    width: calc(100% / 5);
     animation: popIn 0.8s ease-in forwards;
     animation-delay: 0.9s;
     transform: scale(0);
