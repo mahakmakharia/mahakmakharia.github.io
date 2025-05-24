@@ -408,7 +408,7 @@ span.highlight {
 
 @media screen and (min-width: 1200px) {
   .content-section {
-    min-height: 100vh;
+    min-height: min(100vh, 850px);
     padding: 120px 32px 32px 32px;
     width: 100%;
     max-width: 1140px;
@@ -427,7 +427,7 @@ span.highlight {
   }
 
   .intro-section {
-    min-height: 100vh;
+    min-height: min(100vh, 850px);
   }
 
   .intro-section .subtitle {
