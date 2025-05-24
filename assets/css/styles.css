@@ -93,7 +93,7 @@ span.highlight {
 }
 .intro-section {
   max-width: 1200px;
-  padding: 84px 24px 24px 24px;
+  padding: 84px 24px 20px 24px;
   min-height: 100vh;
   display: flex;
   justify-content: flex-end;
@@ -121,31 +121,31 @@ span.highlight {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
 }
 .intro-section .img1 {
-  top: 14%;
+  top: 12vh;
   left: 8%;
   width: calc(100% / 3);
   animation: popIn 0.8s ease-in forwards;
   transform: scale(0);
 }
 .intro-section .img2 {
-  top: 12%;
-  left: 50%;
+  top: 11vh;
+  left: 48%;
   width: calc(100% / 3);
   animation: popIn 0.8s ease-in forwards;
   animation-delay: 0.3s;
   transform: scale(0);
 }
 .intro-section .img3 {
-  top: 37%;
-  left: 58%;
+  top: 36vh;
+  left: 54%;
   width: calc(100% / 3);
   animation: popIn 0.8s ease-in forwards;
   animation-delay: 0.6s;
   transform: scale(0);
 }
 .intro-section .img4 {
-  top: 39%;
-  left: 15%;
+  top: 37vh;
+  left: 14%;
   width: calc(100% / 3);
   animation: popIn 0.8s ease-in forwards;
   animation-delay: 0.9s;
@@ -163,7 +163,6 @@ span.highlight {
   position: relative;
   overflow: hidden;
   border: 2px solid transparent;
-  cursor: pointer;
 }
 .work-item .logo {
   height: 24px;
