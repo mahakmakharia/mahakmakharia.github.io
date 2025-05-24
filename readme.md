@@ -1,6 +1,7 @@
-# Personal Portfolio Website
+# My Portfolio Website
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/09f94eb4-f5ef-4ecf-b362-ca22bc4cab3d" />
 
-This is a personal portfolio website inspired by [Mahak Makharia's site](https://mahak.me), originally hosted at [https://mahak.me](https://mahak.me) and [source code here](https://github.com/mahakmakharia/mahakmakharia.github.io). It is a single-page static website built using HTML, CSS, pure CSS animations and Javascript (no frameworks or JavaScript libraries).
+It is a single-page static website built using HTML, CSS, pure CSS animations and JavaScript (no frameworks or JavaScript libraries).
 
 ## ✨ Features
 
@@ -16,8 +17,11 @@ This is a personal portfolio website inspired by [Mahak Makharia's site](https:/
 
 ```bash
 ├── assets/
+│ ├── js/
+│ │ └── main.js # Custom JS for rendering sections using templates
 │ ├── css/
 │ │ └── style.css # All custom styles and animations
+| | └── base.css # All base CSS, like flex and colours
 │ └── images/ # Profile image, project thumbnails, icons
 ├── index.html # Main HTML structure
 ├── CNAME # Optional: for custom domain setup
@@ -39,7 +43,7 @@ To create your own version of this website:
 
 - Update index.html with your own name, about info, project links, etc.
 - Replace images in assets/images/ with your own.
-- Customize the styles in assets/css/style.css.
+- Customise the styles in assets/css/style.css.
 
 3. **Preview locally**
 
@@ -55,9 +59,9 @@ To create your own version of this website:
 - Add a CNAME file containing your domain name (e.g. yourdomain.com).
 - Update DNS settings to point to GitHub Pages.
 
-## 🛠 Customizing Animations
+## 🛠 Customising CSS and Animations
 
-All animations are created using CSS keyframes defined in `style.css`. You can easily add new animations or modify existing ones by editing or creating new `@keyframes` blocks.
+All custom classes are in `styles.css`, and base styles like `flex` are in `base.css`. You can easily update the theme colours by modifying the CSS variables defined in `base.css`. Animations are created using CSS keyframes defined in `style.css`. You can easily add or change new animations by editing or creating new `@keyframes` blocks.
 
 Example:
 
@@ -74,4 +78,4 @@ Example:
 
 ## 📄 License
 
-This project open-source. Feel free to fork this repository and use it as the foundation for your own online portfolio!
+This project is open-source. Feel free to fork this repository and use it as your online portfolio foundation!
